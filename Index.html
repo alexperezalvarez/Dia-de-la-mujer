@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>San Valentin</title>
+    <style>
+        .typing-effect {
+            display: block; /* Asegura que ocupe todo el ancho disponible */
+            border-right: 2px solid;
+            overflow: hidden;
+            font-size: 20px;
+            font-weight: bold;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+            color: white; /* Color de letra blanco */
+            text-align: center;
+            max-width: 90%;
+            margin: auto;
+            word-wrap: break-word;
+            white-space: normal; /* Permite que el texto haga saltos de línea */
+            line-height: 1.5; /* Mejora la separación entre líneas */
+        }
+
+        /* Ajustes para pantallas pequeñas (como un iPhone) */
+        @media screen and (max-width: 600px) {
+            .typing-effect {
+                font-size: 16px; /* Reduce el tamaño en celulares */
+                max-width: 95%;
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <h1>fELIZ SAN VALENTIN</h1></h1>
+    <div class="teddy">
+        <div class="right-ear"></div>
+        <div class="left-ear"></div>
+        <div class="head">
+            <div class="right-eye" id="right-eye"></div>
+            <div class="left-eye"></div>
+            <div class="mouth-area">
+                <div class="right-cheek"></div>
+                <div class="left-cheek"></div>
+                <div class="nose">
+                    <div class="nose-inner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="heart"></div>
+        </div>
+        <div class="right-arm">
+            <div class="arm-inner"></div>
+            <div class="paw"></div>
+        </div>
+        <div class="left-arm">
+            <div class="arm-inner"></div>
+            <div class="paw"></div>
+        </div>
+        <div class="right-leg">
+            <div class="foot"></div>
+        </div>
+        <div class="left-leg">
+            <div class="foot"></div>
+        </div>
+    </div>
+    <h3>🎉✨ ¡Feliz Dia de la Mujer, Laura! ✨🎉💖</h3>
+    
+    <p id="birthday-message" class="typing-effect"></p>
+    
+    <script>
+        const message = "💐✨ En este Día de la Mujer, quiero recordarte lo valiosa, fuerte y maravillosa que eres. Que cada paso que des esté lleno de éxito, amor y felicidad. ¡Eres luz, inspiración y un verdadero tesoro en este mundo! 🌸💖🌷";
+        const messageElement = document.getElementById("birthday-message");
+        
+        let index = 0;
+        function typeMessage() {
+            if (index < message.length) {
+                messageElement.textContent += message.charAt(index);
+                index++;
+                setTimeout(typeMessage, 100);
+            }
+        }
+        
+        typeMessage();
+</script>
+
+</body>
+</html>
